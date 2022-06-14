@@ -1,6 +1,13 @@
 #include "GameAPI.h"
 
 /************************************************************
+	Custom Variables for the mod
+*************************************************************/
+
+std::wstring path;
+
+
+/************************************************************
 	Config Variables (Set these to whatever you need. They are automatically read by the game.)
 *************************************************************/
 
@@ -58,6 +65,7 @@ void Event_Tick()
 // Run once when the world is loaded
 void Event_OnLoad(bool CreatedNewWorld)
 {
+	path = GetThisModSaveFolderPath(L"Speedrun");
 
 }
 
